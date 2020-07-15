@@ -1,0 +1,558 @@
+@import "./common.less";
+// 公共样式
+//*{
+//  font-family: '苹方';
+//}
+
+html,body{
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  color: @font-col;
+  overflow-x: hidden;
+}
+ul{
+  list-style: none;
+}
+
+img{
+  display: inline-block;
+}
+
+input,textarea{
+  -webkit-appearance: none;
+  outline: none;
+}
+
+input::-webkit-input-placeholder{
+  color: #999999;
+}
+input:-moz-placeholder{
+  color: #999999;
+}
+input::-moz-placeholder{
+  color: #999999;
+}
+input:-ms-input-placeholder{
+  color: #999999;
+}
+
+#app{
+  overflow-x: hidden;
+  .vux-header{
+    padding: 0;
+    background: #fff;
+    border-bottom: 1px solid @list-border;
+    .vux-header-left{
+      font-size: .36rem;
+      font-weight: 500;
+      i{
+        color: @font-col;
+        font-size: .4rem;
+      }
+    }
+    .vux-header-title{
+      height: 0.88rem;
+      //font-weight: bold;
+      line-height: 0.88rem;
+      color: @font-col;
+    }
+  }
+}
+
+.vux-confirm{
+  line-height: 16px;
+  .weui-dialog__hd{
+    padding: 0.4rem 0.5rem 0.16rem;
+  }
+}
+// 自定义全局样式
+// 按钮样式
+button{
+  border: none;
+  background: @btn-col;
+  border-radius: 10px;
+  width: 100%;
+  line-height: .9rem;
+  outline: none;
+  font-size: .34rem;
+  color: @font-col;
+}
+.edit_button{
+  padding: 0 .6rem;
+  font-size: 0;
+  margin-top: 1rem;
+}
+button.btn_bright_red{
+  color: #fff;
+}
+// 输入框列表样式
+.input_list{
+  font-size: 0;
+  padding: 0 .30rem;
+  .edit_button{
+    border: none;
+  }
+  div{
+    display: block;
+    position: relative;
+    border-bottom: 1px solid @list-border;
+    input{
+      width: 6rem;
+      border: none;
+      background: rgba(0,0,0,0);
+      line-height: 0.6rem;
+      margin: .25rem 0;
+      font-size: .30rem;
+      padding-left: .82rem;
+    }
+    span{
+      font-size: .26rem;
+      background: #585858;
+      width: 1.7rem;
+      height: .58rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      border-radius: .1rem;
+      position: absolute;
+      right: 0;
+      top: .25rem;
+    }
+  }
+  label:after{
+    content: '';
+    display: inline-block;
+    width: .42rem;
+    height: .42rem;
+    background: @img-col;
+    position: absolute;
+    left: .04rem;
+    bottom: .29rem;
+  }
+}
+
+
+// 微信登录
+#wechat_login{
+  .wechat_login_img{
+    padding-top: 1.54rem;
+    text-align: center;
+    font-size: 0;
+    height: 1.68rem;
+    img{
+      display: inline-block;
+      width: 1.68rem;
+      height: 1.68rem;
+      border-radius: 20px;
+    }
+  }
+  .edit_button{
+    margin-top: 3.32rem;
+    button.btn_bright_red{
+      img{
+        width: .44rem;
+        height: .37rem;
+        padding: 0 .28rem 0 0;
+        vertical-align: middle;
+      }
+    }
+  }
+  .wechat_login_enroll{
+    font-size: .32rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: center;
+    line-height: .3rem;
+    padding: .7rem 1.82rem 0 1.82rem;
+    span{
+      font-size: .32rem;
+    }
+  }
+  .wechat_login_protocol{
+    width: 100%;
+    color: #666666;
+    font-size: .24rem;
+    text-align: center;
+    position: absolute;
+    bottom: .91rem;
+    left: 0;
+    span{
+      color: @partial-color;
+    }
+  }
+}
+
+// 注册1
+#register1{
+  .register_list{
+    label1{
+      background: url('../img/auth/mobile.png') no-repeat  0.2rem 0.35rem;
+      background-size: .42rem .42rem;
+    }
+    .label2{
+      background: url('../img/auth/password.png') no-repeat  0.2rem 0.35rem;
+      background-size: .42rem .42rem;
+    }
+    p{
+      width: 100%;
+      font-size: .24rem;
+      color: #666666;
+      padding-top: .36rem;
+      img{
+        width: .30rem;
+        height: .30rem;
+        margin-right: .19rem;
+        vertical-align: middle;
+      }
+      span{
+        color: #ff7512;
+      }
+    }
+  }
+  .edit_button{
+    margin-top: 1.72rem;
+  }
+}
+
+// 注册2
+#register1{
+  .register_list{
+    .label1{
+      background: url('../img/auth/mobile.png') no-repeat  0.2rem 0.35rem;
+      background-size: .42rem .42rem;
+    }
+    .label2{
+      background: url('../img/auth/password.png') no-repeat  0.2rem 0.35rem;
+      background-size: .42rem .42rem;
+    }
+    .label3{
+      background: url('../img/auth/confirm_password.png') no-repeat  0.2rem 0.35rem;
+      background-size: .42rem .42rem;
+    }
+    .label4{
+      background: url('../img/auth/confirm_password.png') no-repeat  0.2rem 0.35rem;
+      background-size: .42rem .42rem;
+    }
+    .label5{
+      background: url('../img/auth/invite.png') no-repeat  0.26rem 0.35rem;
+      background-size: .32rem .32rem;
+    }
+  }
+  .edit_button{
+    margin-top: 1rem;
+    .btn_bright_red{
+      letter-spacing: 8px;
+    }
+  }
+}
+
+// 登录
+#login{
+  .login_img{
+    text-align: center;
+    font-size: 0;
+    margin: 1.5rem 0;
+    height: 1.55rem;
+    img{
+      display: inline-block;
+      width: 1.55rem;
+      height: 1.55rem;
+      border-radius: 0.4rem;
+    }
+  }
+  .login_enroll_div{
+    width: 100%;
+    margin-top: 1rem;
+    .login_enroll{
+      font-size: .32rem;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      text-align: center;
+      line-height: .33rem;
+      padding: 0 1.69rem 0 1.69rem;
+      span{
+        font-size: .32rem;
+      }
+    }
+  }
+  .login_input{
+    .label1{
+      background: url('../img/auth/mobile.png') no-repeat 0.2rem 0.35rem;
+      background-size: .42rem .42rem;
+    }
+    .label2{
+      background: url('../img/auth/confirm_password.png') no-repeat 0.2rem 0.35rem;
+      background-size: .42rem .42rem;
+    }
+  }
+  .btn_login{
+    margin-top: .8rem;
+    button.btn_bright_red{
+      letter-spacing: 8px;
+    }
+  }
+  .btn_register{
+    margin-top: .38rem;
+    button.btn_bright_red{
+      background: #fff;
+      border: 1px solid;
+      color: @font-col;
+      letter-spacing: 8px;
+    }
+  }
+}
+
+// 验证码登录
+#mobile_login{
+  .mobile_input{
+    .label1{
+      background: url('../img/auth/mobile.png') no-repeat 0.2rem 0.35rem;
+      background-size: .42rem .42rem;
+    }
+    .label2{
+      background: url('../img/auth/password.png') no-repeat 0.2rem 0.35rem;
+      background-size: .42rem .42rem;
+    }
+  }
+  .edit_button{
+    margin-top: 1rem;
+    .btn_bright_red{
+      letter-spacing: 8px;
+    }
+  }
+}
+
+// 忘记密码
+#forget{
+  .input_list{
+    .label1{
+      background: url('../img/auth/mobile.png') no-repeat 0.2rem 0.35rem;
+      background-size: .42rem .42rem;
+    }
+    .label2{
+      background: url('../img/auth/password.png') no-repeat 0.2rem 0.35rem;
+      background-size: .42rem .42rem;
+    }
+    .label3{
+      background: url('../img/auth/confirm_password.png') no-repeat 0.2rem 0.35rem;
+      background-size: .42rem .42rem;
+    }
+    .label4{
+      background: url('../img/auth/confirm_password.png') no-repeat 0.2rem 0.35rem;
+      background-size: .42rem .42rem;
+    }
+    .label5{
+      background: url('../img/auth/invite.png') no-repeat  0.26rem 0.35rem;
+      background-size: .32rem .32rem;
+    }
+  }
+  .edit_button{
+    margin-top: 1.64rem;
+    .btn_bright_red{
+      letter-spacing: 8px;
+    }
+  }
+}
+
+
+// 分享
+#share{
+  font-size: 0;
+  background: #f7f7f7;
+  padding-top: 5px;
+  margin-bottom: 2.06rem;
+  .share_pitchOn{
+    background: #fff;
+    margin-bottom: 5px;
+    .share_pitchOn_title{
+      color: #666;
+      border-bottom: 1px solid #f4f4f4;
+      padding: .38rem .3rem .35rem .3rem;
+      line-height: .30rem;
+      p{
+        font-size: .30rem;
+        display: inline-block;
+        font-weight: 400;
+      }
+      span{
+        display: inline-block;
+        font-size: .26rem;
+        float: right;
+        font-weight: bold;
+        i{
+          font-style: normal;
+          font-weight: bold;
+        }
+      }
+    }
+    .share_pitchOn_img{
+      padding: .30rem .22rem;
+      display: -webkit-box;
+      //justify-content: space-between;
+      flex-wrap: nowrap;
+      li{
+        width: 1.6rem;
+        height: 1.6rem;
+        position: relative;
+        img{
+          width: 1.6rem;
+          height: 1.6rem;
+          border-radius: 5px;
+        }
+        i{
+          width: .35rem;
+          height: .35rem;
+          font-size: .35rem;
+          position: absolute;
+          right: .08rem;
+          top: .08rem;
+          display: inline-block;
+          line-height: .35rem;
+          color: #acacac;
+        }
+      }
+    }
+  }
+  .share_copy{
+    background: #fff;
+    padding-bottom: .3rem;
+    .share_copy_title{
+      padding: .28rem .30rem;
+      border-bottom: 1px solid #f4f4f4;
+      p{
+        font-size: .30rem;
+        color: #666;
+        display: inline-block;
+      }
+      span{
+        display: inline-block;
+        width: .86rem;
+        height: .45rem;
+        border: 1px solid;
+        border-radius: 5px;
+        font-size: .28rem;
+        text-align: center;
+        line-height: .45rem;
+        float: right;
+      }
+    }
+    .share_copy_con {
+      margin: .30rem;
+      background: #f6f6f6;
+      padding: .30rem .28rem;
+      border-radius: 10px;
+      .title {
+        img {
+          width: .33rem;
+          height: .33rem;
+          vertical-align: top;
+          margin-right: .13rem;
+          margin-top: .06rem;
+        }
+        p {
+          width: 5.88rem;
+          font-size: .30rem;
+          line-height: .48rem;
+          font-weight: bold;
+          overflow: hidden;
+          display: -webkit-inline-box;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+          /*! autoprefixer: off */
+          -webkit-box-orient: vertical;
+          /* autoprefixer: on */
+        }
+      }
+      .price {
+        line-height: .29rem;
+        padding-top: .60rem;
+        .p1 {
+          font-size: .26rem;
+          display: inline-block;
+          padding-left: .45rem;
+          span {
+            font-size: .36rem;
+            font-weight: bold;
+          }
+        }
+        .p2 {
+          font-size: .24rem;
+          color: #999999;
+          display: inline-block;
+          padding-left: .51rem;
+        }
+      }
+      .copy{
+        text-align: center;
+        span{
+          display: inline-block;
+          width: 1.64rem;
+          border-bottom: 2px dashed #dcdcdc;
+          padding-top: .41rem;
+        }
+        p{
+          text-align: left;
+          font-size: .24rem;
+          color: #999;
+          padding-top: .41rem;
+          word-break: break-all;
+        }
+      }
+    }
+  }
+  .share_to{
+    background: #fff;
+    border-top: 1px solid #ccc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    h2{
+      font-size: .26rem;
+      text-align: center;
+      padding-top: .32rem;
+      color: #666666;
+    }
+    ul{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      padding: .32rem .5rem;
+      li{
+        width: .70rem;
+        height: .70rem;
+        img{
+          width: .70rem;
+          height: .70rem;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+
+/*字体相关*/
+.text-overflow_1-xzh{ /*单行超出省略*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.text-overflow_2-xzh{/*第二行超出省略*/
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow:ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.text-overflow_3-xzh{/*第三行超出省略*/
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow:ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
